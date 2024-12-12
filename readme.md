@@ -30,7 +30,8 @@
 <! Tec >
 
 # Pessoas Desenvolvedoras do Projeto
-<! Duda, Yasmin >
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/37356058?v=4" width=115><br><sub>Duda</sub>](https://github.com/Sunieee9) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/30351153?v=4" width=115><br><sub>Rafael</sub>](https://github.com/Rafael1572008) |
+| :---: | :---: | :---: |
 
 # Conclusão
 <! Conclusão >
