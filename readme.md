@@ -27,10 +27,10 @@
 <! Funcionalidades >
 
 # Tecnologias utilizadas
-<! Lembra da API >
+<! Tec >
 
 # Pessoas Desenvolvedoras do Projeto
-<! Sara, Kaio, Hideki >
+<! Duda, Yasmin >
 
 # Conclusão
 <! Conclusão >
