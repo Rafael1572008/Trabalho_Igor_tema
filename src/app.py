@@ -1,5 +1,4 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
@@ -17,7 +16,7 @@ class Orders(db.Model):
     tatal = db.Column(db.Integer, nullable = False)
 
     order = db.relationship('order', back_populates='persons', lazy=True)  # relacao com person
-    order_producst_2 = db.relationship('order_producst_2', back_populates = 'order_producst', lazy=True)
+    order_producst_2 = db.relationship('order_producst_2', back_populates = 'order_producst_3', lazy=True)
 
 class Person(db.Model):
     __tablename__ = 'Person'
@@ -61,12 +60,12 @@ class Orders_Products(db.Model):
     total_f = db.Column(db.Integer, nullable = False)
 
     order_producst = db.relationship('order_producst', back_populates = 'order_producst_1', lazy=True)
-    order_producst_3 = db.relationship('order_producst_2', back_populates = 'order_producst_2', lazy=True)
+    order_producst_3 = db.relationship('order_producst_3', back_populates = 'order_producst_2', lazy=True)
 
-    if __name__ == "__main__":
-        with app.app_context():
-            db.create_all()
-        app.run()
+if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
+    app.run()
 
 categoria = Category(id_category = 1, name = "Colar", description = "Coala")
 db.session.add(categoria)
