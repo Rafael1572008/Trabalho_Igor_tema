@@ -17,5 +17,3 @@ if __name__ == "__main__":
 
         # Criar tabelas no banco de dados
         app.run(debug=True)
-
-

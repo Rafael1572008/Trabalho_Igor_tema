@@ -12,4 +12,4 @@ class CategoryDAO:
     
     @staticmethod
     def get_category(id_category):
-        return Category.query.all(id_category)
+        return Category.query.get(id_category)

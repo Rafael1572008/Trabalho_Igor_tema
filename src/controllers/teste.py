@@ -1,18 +1,15 @@
-from flask import Flask, Blueprint
-from DAO import CategoryDAO
+from flask import Blueprint
+from repository import CategoriaRepository
 
 teste = Blueprint('teste', __name__)
 
 @teste.route('/add')
 def add():
+    name = "Brincos"
+    description = "Bolas Brilhantes nas orelhas"
 
-    name = "Colar"
-    description = "Bolas Brilhantes"
+    repository = CategoriaRepository()
+    category = repository.add_category(name=name, description=description)
 
-    category = CategoryDAO.add_category(name = name, description = description)
-
-    print(f"categoria adicionado: {category.to_json()}")
+    print(f"Categoria adicionada: {category}")
     return "Categoria adicionada com sucesso!"
-
-
-
