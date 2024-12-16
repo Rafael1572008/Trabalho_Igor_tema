@@ -3,13 +3,14 @@ from repository import CategoriaRepository
 
 teste = Blueprint('teste', __name__)
 
-@teste.route('/add')
+@teste.route('/filter')
 def add():
-    name = "Brincos"
-    description = "Bolas Brilhantes nas orelhas"
+    id = 1
+    name = "Batom"
+    description = "batom vrilahnte"
 
     repository = CategoriaRepository()
-    category = repository.add_category(name=name, description=description)
+    category = repository.edit_category(id_category = id, name=name, description = description)
 
-    print(f"Categoria adicionada: {category}")
-    return "Categoria adicionada com sucesso!"
+    print(f"Categoria alterado: {category}")
+    return f"Categoria alterado com sucesso!"
